@@ -45,3 +45,10 @@ function toggleMenu() {
   const navLinks = document.querySelector(".nav-links");
   navLinks.classList.toggle("open");
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const navLinks = document.querySelectorAll(".nav-links a");
+  navLinks.forEach((link) => {
+    link.addEventListener("click", toggleMenu);
+  });
+});
