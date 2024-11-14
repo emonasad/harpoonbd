@@ -416,6 +416,10 @@ textarea {
         width: 150px;
     }
 
+    .share-section .input-data {
+        display: block;
+    }
+
     /* Footer alignment for small screens */
     .footer-content {
         flex-direction: column;
