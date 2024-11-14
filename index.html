@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/Harpon.png">
+    <title>Harpoon Campaign</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header Navigation -->
+    <header class="header-nav">
+      <nav>
+        <div class="logo">
+          <a href="/">
+            <img
+              src="./assets/images/Harpon.png"
+              class="logo-image"
+              alt="Harpon Logo"
+            />
+          </a>
+          <div class="divider"></div>
+          <img
+            src="./assets/images/WTD.png"
+            class="logo-image"
+            alt="WTD Logo"
+          />
+        </div>
+        <ul class="nav-links">
+          <li><a href="#join-now">জয়েন করুন</a></li>
+          <li><a href="#shopoth">শপথ নিন</a></li>
+          <li><a href="#story">আওয়াজ তুলুন</a></li>
+          <li><a href="#">সাথে থাকুন</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section with Carousel -->
+    <section class="carousel">
+      <div class="carousel-container">
+        <div class="carousel-slide">
+          <img
+            src="./assets/images/Banner1.jpg"
+            alt="Slide 1"
+            class="carousel-image"
+          />
+        </div>
+        <div class="carousel-slide">
+          <img
+            src="./assets/images/Banner2.jpg"
+            alt="Slide 2"
+            class="carousel-image"
+          />
+        </div>
+        <div class="carousel-slide">
+          <img
+            src="./assets/images/Banner3.jpg"
+            alt="Slide 3"
+            class="carousel-image"
+          />
+        </div>
+      </div>
+      <!-- Dots for Navigation -->
+      <div class="carousel-dots">
+        <span class="dot" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+      </div>
+    </section>
+
+    <!-- Power for her -->
+    <section class="harpon">
+      <img src="./assets/images/Harpon.png" alt="" />
+    </section>
+
+    <!-- Join Us Section -->
+    <div class="join-us" id="join-now">
+      <!-- title  -->
+      <div
+        class=""
+        style="
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          width: 100%;
+          height: 40px;
+        "
+      >
+        <div
+          class=""
+          style="
+            background-color: white;
+            display: flex;
+            justify-content: end;
+            padding: 2px 30px;
+          "
+        >
+          <img src="./assets/images/joinkorun.png" alt="" />
+        </div>
+        <div
+          class=""
+          style="background: linear-gradient(90deg, #000078, #017fcb)"
+        ></div>
+      </div>
+      <div class="" style="margin: 50px 0px">
+        <div class="photo-frame">
+          <div>
+            <h3>ফ্রেম ১</h3>
+            <img
+              style="background-color: white"
+              src="./assets/images/PhotoFrame_v2.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <h3>ফ্রেম ২</h3>
+            <img src="./assets/images/PhotoFrame.png" alt="" />
+          </div>
+        </div>
+        <div class="photo-frame">
+          <div>
+            <h3>ফ্রেম নির্বাচন করুন</h3>
+            <div>
+              <img
+                src="./assets/JPG/upload.png"
+                alt="Upload"
+                style="cursor: pointer; width: 200px; height: 170px"
+                onclick="document.getElementById('fileInput').click()"
+              />
+              <input type="file" id="fileInput" style="display: none" />
+            </div>
+            <h3>ছবি আপলোড করুন</h3>
+          </div>
+        </div>
+        <div class="show-image">
+          <h3>ছবি আপলোড করার পর আপনার পোস্টার এখানে শো করবে</h3>
+        </div>
+        <div class="personal-poster">
+          <h3>আপনার পোস্টার</h3>
+          <button style="background: none; border: none;"><img src="./assets/JPG/Save-Button.png" alt="" /></button>
+          <button style="background: none; border: none;"><img src="./assets/JPG/Share-Button.png" alt="" /></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shopoth Section -->
+    <section id="shopoth">
+      <!-- title  -->
+      <div
+        class=""
+        style="
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          width: 100%;
+          height: 40px;
+        "
+      >
+        <div
+          class=""
+          style="
+            background-color: white;
+            display: flex;
+            justify-content: end;
+            padding: 2px 30px;
+          "
+        >
+          <img src="./assets/images/shopothnin.png" alt="" />
+        </div>
+        <div
+          class=""
+          style="background: linear-gradient(90deg, #000078, #017fcb)"
+        ></div>
+      </div>
+      <section class="share-section">
+        <div style="margin: 30px 0">
+          <h4>
+            সার্টিফিকেট পেতে <br />
+            নিজের তথ্য দিয়ে নিবন্ধন করুন
+          </h4>
+          <form>
+            <div class="input-data">
+              <input type="text" placeholder="আপনার নাম" />
+              <input type="tel" placeholder="মোবাইল নম্বর" />
+              <input type="text" placeholder="রেফারেন্স নম্বর" />
+            </div>
+            <button style="background: none; border: none;" type="submit">
+              <img src="./assets/JPG/Certificate-Download-Button.png" alt="" />
+            </button>
+          </form>
+        </div>
+      </section>
+    </section>
+
+    <!-- Story Section -->
+    <div class="" id="story">
+      <!-- title  -->
+      <div
+        class=""
+        style="
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          width: 100%;
+          height: 40px;
+        "
+      >
+        <div
+          class=""
+          style="
+            background-color: white;
+            display: flex;
+            justify-content: end;
+            padding: 2px 30px;
+          "
+        >
+          <img src="./assets/images/awaztulun.png" alt="" />
+        </div>
+        <div
+          class=""
+          style="background: linear-gradient(90deg, #000078, #017fcb)"
+        ></div>
+      </div>
+      <section class="story-section">
+        <h2>
+          আপনার গল্পটি এখানে লিখে <br />
+          সবার সাথে শেয়ার করুন
+        </h2>
+        <form class="story-form">
+          <div class="input-group">
+            <input type="text" placeholder="আপনার নাম*" required />
+            <input type="email" placeholder="ই-মেইল*" required />
+          </div>
+          <textarea
+            placeholder="আপনার গল্পটি সর্বোচ্চ ৩০০ শব্দের মধ্যে এখানে লিখুন"
+          ></textarea>
+          <button
+            type="submit"
+            style="
+              padding: 10px 0px;
+              color: white;
+              cursor: pointer;
+              border: none;
+              box-shadow: 20px;
+              background: linear-gradient(90deg, #000078, #017fcb);
+            "
+            class="submit-button"
+          >
+            শেয়ার করুন
+          </button>
+        </form>
+      </section>
+    </div>
+    <!-- Video Upload Section -->
+    <section>
+      <!-- title  -->
+      <div
+        class=""
+        style="
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          width: 100%;
+          height: 40px;
+        "
+      >
+        <div
+          class=""
+          style="
+            background-color: white;
+            display: flex;
+            justify-content: end;
+            padding: 2px 30px;
+          "
+        >
+          <img src="./assets/images/videoBanan.png" alt="" />
+        </div>
+        <div
+          class=""
+          style="background: linear-gradient(90deg, #000078, #017fcb)"
+        ></div>
+      </div>
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          margin: 20px 0px;
+        "
+      >
+        <div>
+          <h4 style="margin: 20px 0">
+            ভিডিও আপলোড করতে <br />
+            নিচের আপলোড বাটন ক্লিক করুন
+          </h4>
+          <!--  -->
+          <div>
+            <img
+              src="./assets/JPG/Video-Link-Button.png"
+              alt="Upload"
+              style="cursor: pointer"
+              onclick="document.getElementById('fileInput').click()"
+            />
+            <input type="file" id="fileInput" style="display: none" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comment Section -->
+    <section style="margin: 20px 0">
+      <!-- title  -->
+      <div
+        class=""
+        style="
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          width: 100%;
+          height: 40px;
+        "
+      >
+        <div
+          class=""
+          style="
+            background-color: white;
+            display: flex;
+            justify-content: end;
+            padding: 2px 30px;
+          "
+        >
+          <img src="./assets/images/blogGallary.png" alt="" />
+        </div>
+        <div
+          class=""
+          style="background: linear-gradient(90deg, #000078, #017fcb)"
+        ></div>
+      </div>
+      <div style="display: flex; justify-content: center; margin: 20px 0">
+        <div class="comment" style="">
+          <!-- Repeat the comment box as needed -->
+          <div
+            style="
+              background-color: white;
+              padding: 15px;
+              border-radius: 5px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+              text-align: center;
+            "
+          >
+            <h3 style="margin: 0; font-size: 18px; color: gray">
+              সুমাইয়া বরকতউল্লাহ
+            </h3>
+            <p style="margin: 10px 0; font-size: 14px; color: gray">
+              ফিল্ম হাউজিং নিয়ে কথা বলতে গেলে অবশ্যই আলো গবেষকের পরিপ্রেক্ষিত
+              বিবেচনা।
+            </p>
+            <a href="#" style="color: #007bff; font-size: 14px">আরও পড়ুন...</a>
+          </div>
+
+          <div
+            style="
+              background-color: white;
+              padding: 15px;
+              border-radius: 5px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+              text-align: center;
+            "
+          >
+            <h3 style="margin: 0; font-size: 18px; color: gray">শমী ওয়াদিদ</h3>
+            <p style="margin: 10px 0; font-size: 14px; color: gray">
+              ফিল্ম হাউজিং নিয়ে কথা বলতে গেলে অবশ্যই আলো গবেষকের পরিপ্রেক্ষিত
+              বিবেচনা।
+            </p>
+            <a href="#" style="color: #007bff; font-size: 14px">আরও পড়ুন...</a>
+          </div>
+
+          <div
+            style="
+              background-color: white;
+              padding: 15px;
+              border-radius: 5px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+              text-align: center;
+            "
+          >
+            <h3 style="margin: 0; font-size: 18px; color: gray">
+              হেদায়েত উল্লাহ
+            </h3>
+            <p style="margin: 10px 0; font-size: 14px; color: gray">
+              ফিল্ম হাউজিং নিয়ে কথা বলতে গেলে অবশ্যই আলো গবেষকের পরিপ্রেক্ষিত
+              বিবেচনা।
+            </p>
+            <a href="#" style="color: #007bff; font-size: 14px">আরও পড়ুন...</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <section>
+      <!-- title  -->
+      <div
+        class=""
+        style="
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          width: 100%;
+          height: 40px;
+        "
+      >
+        <div
+          class=""
+          style="
+            background-color: white;
+            display: flex;
+            justify-content: end;
+            padding: 2px 30px;
+          "
+        >
+          <img src="./assets/images/videoGallary.png" alt="" />
+        </div>
+        <div
+          class=""
+          style="background: linear-gradient(90deg, #000078, #017fcb)"
+        ></div>
+      </div>
+
+      <div style="margin: 20px 0">
+        <div class="video-section">
+          <video controls>
+            <source src="path/to/video1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <video controls>
+            <source src="path/to/video1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <video controls>
+            <source src="path/to/video1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-left">
+          <p>#harpoon #hygieneforallpowerforher</p>
+        </div>
+        <div class="footer-right">
+          <p>Follow Us On:</p>
+          <a href="#" class="social-icon"
+            ><img src="assets/logo/facebook.png" alt="Facebook"
+          /></a>
+
+          <a href="#" class="social-icon"
+            ><img src="assets/logo/instagram.png" alt="Instagram"
+          /></a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
